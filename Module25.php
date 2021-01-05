@@ -6,16 +6,12 @@ abstract class Person
     public $name;
     public $lastName;
 
-    private static $PeopleCount = 0;
-    public static function GetAllPeopleCount()
-    {
-        return static::$PeopleCount;
-    }
+    private static $peopleCount = 0;
+
 
     public function __construct(int $Age, string $Name, string $lastName)
     {
-        self::$PeopleCount++;
-        $this->age = $Age;
+          $this->age = $Age;
         $this->name = $Name;
         $this->lastName = $lastName;
     }
